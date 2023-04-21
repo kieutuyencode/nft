@@ -1,0 +1,10 @@
+export const backgroundSplash = require('../assets/images/Banner.png');
+export const background1 = require('../assets/images/Login.png');
+export const eye = require('../assets/images/eye.png');
+export const eyeOff = require('../assets/images/eye-off.png');
+export const iconFa = require('../assets/images/iconFacebook.png');
+export const iconGoogle = require('../assets/images/IconGoogle.png');
+export const bgclaim = require('../assets/images/bgclaim.png');
+export const mintNFT = require('../assets/images/mintNFT.png');
+export const company1 = require('../assets/images/aa.png');
+export const company2 = require('../assets/images/Usdt.png');
