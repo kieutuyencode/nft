@@ -9,7 +9,7 @@ import {useLanguage} from '../../../store/language';
 
 export default function Virtual() {
   const language = useLanguage();
-  const data = [1];
+  const data = [0];
   return (
     <Container tab={1}>
       {!data.length > 0 ? (

@@ -18,12 +18,13 @@ export default function ListItem() {
         <ScrollView
           horizontal
           contentContainerStyle={{
-            paddingHorizontal: scale(20),
+            paddingHorizontal: scale(22),
             paddingBottom: scale(16),
-            columnGap: scale(20),
+            columnGap: scale(22),
           }}>
           {data.map((item, index) => (
             <Item
+              light={index === 0}
               key={index}
               money={item.money}
               text1={item.text1[language]}

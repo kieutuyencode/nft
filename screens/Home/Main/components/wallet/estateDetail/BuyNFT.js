@@ -42,7 +42,7 @@ export default function BuyNFT() {
           font={IBMPlexSans700}
           size={16}
           lineHeight={18}
-          vertical={10}
+          vertical={12}
           horizontal={64}
         />
       </View>

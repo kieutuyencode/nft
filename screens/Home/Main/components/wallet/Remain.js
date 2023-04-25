@@ -25,6 +25,7 @@ import {
   customFontsize,
   customHeight,
   customMarginBottom,
+  customMarginHorizontal,
   customMarginLeft,
   customMarginTop,
   customPaddingBottom,
@@ -46,52 +47,54 @@ export default function Remain() {
   const {navigate} = useNavigation();
 
   return (
-    <View style={[customMarginTop(29), customMarginBottom(130)]}>
-      <View style={{borderRadius: 18, overflow: 'hidden'}}>
-        <ImageBackground source={bgclaim}>
-          <View style={styles.container}>
-            <Text style={styles.text}>{claim[language]}</Text>
-            <Text style={styles.textBig}>500 Token</Text>
-            <Text style={styles.text}>{itfree[language]}</Text>
-            <View style={customMarginTop(10)}>
-              <ButtonPadding
-                text={earningNow[language]}
-                vertical={12}
-                horizontal={16}
-                onPress={() => navigate('EarningFree')}
-              />
+    <>
+      <View style={[customMarginTop(29), customMarginHorizontal(20)]}>
+        <View style={{borderRadius: 18, overflow: 'hidden'}}>
+          <ImageBackground source={bgclaim}>
+            <View style={styles.container}>
+              <Text style={styles.text}>{claim[language]}</Text>
+              <Text style={styles.textBig}>500 Token</Text>
+              <Text style={styles.text}>{itfree[language]}</Text>
+              <View style={customMarginTop(10)}>
+                <ButtonPadding
+                  text={earningNow[language]}
+                  vertical={12}
+                  horizontal={16}
+                  onPress={() => navigate('EarningFree')}
+                />
+              </View>
             </View>
-          </View>
-        </ImageBackground>
-      </View>
-      <View style={[styles.shareLink, styles.flex]}>
-        <Text style={styles.textShareLink}>{shareLink[language]}</Text>
-        <TouchableOpacity
-          onPress={() =>
-            navigate('Setting', {screen: 'ReferralLink', initial: false})
-          }>
-          <LinearGradient
-            colors={['rgba(255, 255, 255, 0.2)', 'rgba(255, 255, 255, 0)']}
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}}
-            style={[styles.flex, customMarginLeft(7), styles.btn]}>
-            <Text style={styles.textGetNow}>{getNow[language]}</Text>
-            <ArrowBtnRight />
-          </LinearGradient>
-        </TouchableOpacity>
-      </View>
-      <View style={{borderRadius: 14, overflow: 'hidden'}}>
-        <ImageBackground source={mintNFT}>
-          <View style={styles.nft}>
-            <Text style={styles.nftText}>{nftMarket[language]}</Text>
-            <TouchableOpacity style={styles.nftBtn}>
-              <Text style={styles.nftTextSm}>{gotoShop[language]}</Text>
-            </TouchableOpacity>
-          </View>
-        </ImageBackground>
+          </ImageBackground>
+        </View>
+        <View style={[styles.shareLink, styles.flex]}>
+          <Text style={styles.textShareLink}>{shareLink[language]}</Text>
+          <TouchableOpacity
+            onPress={() =>
+              navigate('Setting', {screen: 'ReferralLink', initial: false})
+            }>
+            <LinearGradient
+              colors={['rgba(255, 255, 255, 0.2)', 'rgba(255, 255, 255, 0)']}
+              start={{x: 0, y: 0}}
+              end={{x: 1, y: 0}}
+              style={[styles.flex, customMarginLeft(7), styles.btn]}>
+              <Text style={styles.textGetNow}>{getNow[language]}</Text>
+              <ArrowBtnRight />
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+        <View style={{borderRadius: 14, overflow: 'hidden'}}>
+          <ImageBackground source={mintNFT}>
+            <View style={styles.nft}>
+              <Text style={styles.nftText}>{nftMarket[language]}</Text>
+              <TouchableOpacity style={styles.nftBtn}>
+                <Text style={styles.nftTextSm}>{gotoShop[language]}</Text>
+              </TouchableOpacity>
+            </View>
+          </ImageBackground>
+        </View>
       </View>
       <ListCard />
-    </View>
+    </>
   );
 }
 

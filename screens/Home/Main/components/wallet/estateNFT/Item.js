@@ -5,11 +5,12 @@ import {
   IBMPlexSans700,
 } from '../../../../../../variable/fontFamily';
 import {scale} from '../../../../../../variable/sizes';
+import HexagonLight from '../../../../../../variable/svgs/HexagonLight';
 
-export default function Item({money, text1, text2}) {
+export default function Item({money, text1, text2, light}) {
   return (
     <View style={styles.container}>
-      <HexagonDark />
+      {!light ? <HexagonDark /> : <HexagonLight />}
       <View style={styles.inner}>
         <Text style={styles.money}>{money}</Text>
         <Text style={styles.text}>{text1}</Text>

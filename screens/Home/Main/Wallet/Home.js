@@ -70,8 +70,8 @@ export default function Home() {
             </View>
           </View>
           <ListButton />
-          <Remain />
         </View>
+        <Remain />
       </ScrollView>
     </Background1>
   );

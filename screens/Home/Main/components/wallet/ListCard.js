@@ -16,10 +16,7 @@ export default function ListCard() {
   const {navigate} = useNavigation();
 
   return (
-    <ScrollView
-      horizontal
-      style={styles.container}
-      contentContainerStyle={styles.container}>
+    <ScrollView horizontal contentContainerStyle={styles.container}>
       <View style={styles.width}>
         <Card
           icon={<Earn2 />}
@@ -52,6 +49,9 @@ const styles = StyleSheet.create({
     paddingBottom: scale(6),
     paddingRight: scale(30),
     columnGap: 22 * scaleWidth,
+    paddingLeft: scale(20),
+    marginBottom: scale(130),
+    marginTop: scale(16),
   },
   width: {
     width: (scaleWidth * 375 - 20 * 2 * scaleWidth - 22 * scaleWidth) / 2,

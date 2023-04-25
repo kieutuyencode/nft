@@ -11,15 +11,11 @@ import {
   scale,
 } from '../../variable/sizes';
 import NumberWallet from '../../variable/svgs/NumberWallet';
-import {IBMPlexSans400, IBMPlexSans700} from '../../variable/fontFamily';
+import {IBMPlexSans400} from '../../variable/fontFamily';
 import Background1 from './Background1';
 import ButtonBack from '../buttons/ButtonBack';
-import Button from '../buttons/Button';
-import {useLanguage} from '../../store/language';
 
-export default function BackgroundBack({children, hide, cart}) {
-  const language = useLanguage();
-
+export default function BackgroundBack({children, hide, noScroll}) {
   return (
     <View style={{flex: 1}}>
       <View style={styles.container}>
@@ -43,23 +39,13 @@ export default function BackgroundBack({children, hide, cart}) {
         )}
       </View>
       <Background1>
-        <ScrollView style={{position: 'relative'}}>
-          <View style={customMarginBottom(130)}>{children}</View>
-          {cart && (
-            <View style={styles.button}>
-              <Button
-                text={buynow[language]}
-                font={IBMPlexSans700}
-                size={14}
-                lineHeight={17}
-                vertical={6}
-                horizontal={20}
-                angle={true}
-                borderNone
-              />
-            </View>
-          )}
-        </ScrollView>
+        {!noScroll ? (
+          <ScrollView>
+            <View style={customMarginBottom(130)}>{children}</View>
+          </ScrollView>
+        ) : (
+          <View style={{flex: 1}}>{children}</View>
+        )}
       </Background1>
     </View>
   );
@@ -79,11 +65,4 @@ const styles = StyleSheet.create({
     color: 'white',
     ...customFontsize(14),
   },
-  button: {
-    position: 'absolute',
-    bottom: scale(50),
-    right: scale(16),
-  },
 });
-
-const buynow = {en: 'Buy more', vn: 'Mua thêm'};

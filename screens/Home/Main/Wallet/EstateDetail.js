@@ -6,7 +6,6 @@ import {
   MAX,
   days,
   desc,
-  mint,
   title,
   total,
 } from '../../../../language/home/main/wallet/estate-NFT';
@@ -14,8 +13,6 @@ import {scale} from '../../../../variable/sizes';
 import Text400size16 from '../../../../components/texts/Text400size16';
 import Progress from '../components/wallet/estateNFT/Progress';
 import ListItem from '../components/wallet/estateNFT/ListItem';
-import Button from '../../../../components/buttons/Button';
-import {IBMPlexSans700} from '../../../../variable/fontFamily';
 import {useNavigation} from '@react-navigation/native';
 import Remain from '../components/wallet/estateDetail/Remain';
 

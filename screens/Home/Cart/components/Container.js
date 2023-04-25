@@ -1,5 +1,6 @@
 import {
   ImageBackground,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -18,13 +19,14 @@ import {useLanguage} from '../../../../store/language';
 import {bannerCart} from '../../../../variable/images';
 import {virtualDesc} from '../../../../language/home/main/wallet/wallet';
 import {useNavigation} from '@react-navigation/native';
+import Button from '../../../../components/buttons/Button';
 
 export default function Container({children, tab}) {
   const language = useLanguage();
   const {navigate} = useNavigation();
 
   return (
-    <BackgroundBack hide cart>
+    <BackgroundBack hide noScroll>
       <View style={styles.menu}>
         {data.map((item, index) => (
           <TouchableOpacity onPress={() => navigate(item.link)} key={index}>
@@ -34,11 +36,27 @@ export default function Container({children, tab}) {
           </TouchableOpacity>
         ))}
       </View>
-      <ImageBackground source={bannerCart}>
-        <Text style={styles.title}>{data[tab].text[language]}</Text>
-        <Text style={styles.des}>{virtualDesc[language]}</Text>
-      </ImageBackground>
-      {children}
+      <ScrollView style={{position: 'relative'}}>
+        <View style={{marginBottom: scale(130)}}>
+          <ImageBackground source={bannerCart}>
+            <Text style={styles.title}>{data[tab].text[language]}</Text>
+            <Text style={styles.des}>{virtualDesc[language]}</Text>
+          </ImageBackground>
+          {children}
+        </View>
+        <View style={styles.button}>
+          <Button
+            text={buynow[language]}
+            font={IBMPlexSans700}
+            size={14}
+            lineHeight={17}
+            vertical={6}
+            horizontal={20}
+            angle={true}
+            borderNone
+          />
+        </View>
+      </ScrollView>
     </BackgroundBack>
   );
 }
@@ -72,6 +90,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginVertical: scale(6),
   },
+  button: {
+    position: 'absolute',
+    bottom: scale(50),
+    right: scale(16),
+  },
 });
 
 const data = [
@@ -80,3 +103,5 @@ const data = [
   {text: mycard, link: 'Card'},
   {text: mymarket, link: 'MarketPlace'},
 ];
+
+const buynow = {en: 'Buy more', vn: 'Mua thêm'};
