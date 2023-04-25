@@ -72,3 +72,8 @@ export const logout = {
   en: 'LOG OUT',
   vn: 'ĐĂNG XUẤT',
 };
+
+export const myassets = {
+  en: 'MY ASSETS',
+  vn: 'TÀI SẢN CỦA TÔI',
+};

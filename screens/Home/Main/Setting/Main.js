@@ -12,6 +12,7 @@ import {
   link,
   listing,
   logout,
+  myassets,
   presale,
   promotion,
   security12,
@@ -89,6 +90,11 @@ export default function Main() {
           onPress={() =>
             dispatch(handlerLanguage(language === 'vn' ? 'en' : 'vn'))
           }
+        />
+        <Item
+          text={myassets[language]}
+          border
+          onPress={() => navigate('Cart')}
         />
         <View style={[customMarginTop(66)]}>
           <ItemWithIcon text="Telegram" icon={<Telegram />} />

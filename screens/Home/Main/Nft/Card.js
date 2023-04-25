@@ -44,5 +44,6 @@ const styles = StyleSheet.create({
   containTextDesc: {
     marginTop: scale(6),
     marginBottom: scale(26),
+    marginHorizontal: scale(22),
   },
 });

@@ -20,6 +20,9 @@ import {
 import HistoryBorder from '../../../../components/history/HistoryBorder';
 import Item from '../components/nft/virtual/Item';
 import VirtualSilver from '../../../../variable/svgs/VirtualSilver';
+import VirtualGold from '../../../../variable/svgs/VirtualGold';
+import VirtualPlatinum from '../../../../variable/svgs/VirtualPlatinum';
+import VirtualVip from '../../../../variable/svgs/VirtualVip';
 
 export default function Virtual() {
   const language = useLanguage();
@@ -39,7 +42,7 @@ export default function Virtual() {
         title={silver[language]}
       />
       <Item
-        icon={<VirtualSilver />}
+        icon={<VirtualGold />}
         type="Gold"
         months={36}
         growth={10}
@@ -47,7 +50,7 @@ export default function Virtual() {
         title={gold[language]}
       />
       <Item
-        icon={<VirtualSilver />}
+        icon={<VirtualPlatinum />}
         type="Platinum"
         months={36}
         growth={15}
@@ -55,7 +58,7 @@ export default function Virtual() {
         title={platinum[language]}
       />
       <Item
-        icon={<VirtualSilver />}
+        icon={<VirtualVip />}
         type="Vip"
         months={36}
         growth={20}
@@ -82,5 +85,6 @@ const styles = StyleSheet.create({
   containTextDesc: {
     marginTop: scale(6),
     marginBottom: scale(42),
+    marginHorizontal: scale(16),
   },
 });

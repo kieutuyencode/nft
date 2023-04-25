@@ -21,3 +21,4 @@ export const virtual_silver = require('../assets/images/virtual_silver.png');
 export const virtual_gold = require('../assets/images/virtual_gold.png');
 export const virtual_platinum = require('../assets/images/virtual_platinum.png');
 export const virtual_vip = require('../assets/images/virtual_vip.png');
+export const bannerCart = require('../assets/images/bannerCart.png');

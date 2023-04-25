@@ -12,15 +12,17 @@ export default function Button({
   lineHeight,
   test,
   size,
+  angle,
+  borderNone,
 }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <LinearGradient
         colors={[primary, gradient]}
-        start={{x: 0, y: 0}}
-        end={{x: 0, y: 1}}
+        start={{x: angle ? 1 : 0, y: 0}}
+        end={{x: 0, y: angle ? 0 : 1}}
         style={{
-          borderWidth: scale(1),
+          borderWidth: scale(borderNone ? 0 : 1),
           borderColor: 'rgba(255, 255, 255, 0.16)',
           borderRadius: 999,
         }}>

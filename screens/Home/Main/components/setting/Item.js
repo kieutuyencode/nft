@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     ...customFontsize(18),
     color: 'white',
     flex: 1,
-    lineHeight: scale(20),
+    lineHeight: scale(22),
   },
 });

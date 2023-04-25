@@ -11,14 +11,25 @@ import Star from '../../../../../../variable/svgs/Star';
 import Star0 from '../../../../../../variable/svgs/Star0';
 import {useNavigation} from '@react-navigation/native';
 
-export default function Item({category, title, address, price, img, star}) {
+export default function Item({
+  category,
+  title,
+  address,
+  price,
+  img,
+  star,
+  cart,
+}) {
   const language = useLanguage();
   const {navigate} = useNavigation();
 
   return (
     <View style={styles.container}>
-      <View style={styles.left}>
-        <Image source={img} style={styles.img} />
+      <View style={[styles.left, !cart && {width: '50%'}]}>
+        <Image
+          source={img}
+          style={[styles.img, cart && {width: scale(101), height: scale(99)}]}
+        />
         <View style={styles.containStar}>
           <Text style={styles.textStar}>{category}</Text>
           <View style={{flexDirection: 'row', columnGap: scale(3)}}>
@@ -31,16 +42,25 @@ export default function Item({category, title, address, price, img, star}) {
           </View>
         </View>
       </View>
-      <View style={styles.right}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.address}>{address}</Text>
-        <Text style={styles.price}>${price}</Text>
-        <View style={{marginTop: scale(20), marginRight: scale(16)}}>
-          <Button
-            text={buy[language]}
-            vertical={8}
-            onPress={() => navigate('DetailMarket')}
-          />
+      <View
+        style={[
+          styles.right,
+          cart && {marginVertical: scale(2)},
+          !cart && {width: '50%'},
+        ]}>
+        <View>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.address}>{address}</Text>
+          <Text style={styles.price}>${price}</Text>
+          {!cart && (
+            <View style={{marginTop: scale(20), marginRight: scale(16)}}>
+              <Button
+                text={buy[language]}
+                vertical={8}
+                onPress={() => navigate('DetailMarket')}
+              />
+            </View>
+          )}
         </View>
       </View>
     </View>
@@ -59,15 +79,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(20, 14, 37, 0.5);',
   },
   left: {
-    width: '50%',
     borderRadius: 17,
     overflow: 'hidden',
     position: 'relative',
   },
   right: {
-    width: '50%',
-    paddingVertical: scale(12),
-    paddingLeft: scale(16),
+    marginVertical: scale(12),
+    marginLeft: scale(16),
   },
   img: {
     width: '100%',

@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     ...Roboto700,
     fontSize: scale(16),
     color: 'white',
-    lineHeight: scale(18),
+    lineHeight: scale(20),
   },
   containTitle: {
     paddingHorizontal: scale(30),

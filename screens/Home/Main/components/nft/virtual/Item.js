@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     ...IBMPlexSans700,
     fontSize: scale(16),
     color: 'white',
-    lineHeight: scale(19),
+    lineHeight: scale(20),
   },
   money: {
     ...IBMPlexSans700,
