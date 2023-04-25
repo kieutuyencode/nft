@@ -1,8 +1,8 @@
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import {View, Text, StyleSheet} from 'react-native';
 import {primary} from '../../../variable/colors';
-import {useDispatch, useSelector} from 'react-redux';
-import {currentLanguage, handlerLanguage} from '../../../store/language';
+import {useSelector} from 'react-redux';
+import {currentLanguage} from '../../../store/language';
 import {
   customFontsize,
   customMarginVertical,
@@ -18,7 +18,6 @@ import {
 } from '../../../language/login-signup';
 
 export default function CheckBox() {
-  const dispatch = useDispatch();
   const language = useSelector(currentLanguage);
   return (
     <View style={styles.container}>
@@ -26,7 +25,6 @@ export default function CheckBox() {
         size={16 * scaleWidth}
         fillColor={primary}
         unfillColor="#FFFFFF"
-        onPress={() => dispatch(handlerLanguage('en'))}
       />
       <View style={{flex: 1}}>
         <Text style={styles.text}>

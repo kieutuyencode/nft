@@ -4,6 +4,7 @@ import {
   customFontsize,
   customMarginRight,
   customMarginVertical,
+  scale,
   scaleWidth,
 } from '../../../../../variable/sizes';
 
@@ -26,5 +27,6 @@ const styles = StyleSheet.create({
     ...IBMPlexSans400,
     ...customFontsize(14),
     color: 'white',
+    lineHeight: scale(16),
   },
 });

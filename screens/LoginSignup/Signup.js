@@ -20,6 +20,7 @@ import {
   customMarginLeft,
   customMarginTop,
   customWidth,
+  scaleWidth,
 } from '../../variable/sizes';
 import {useNavigation} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
@@ -48,7 +49,7 @@ export default function Signup() {
         <View style={{alignItems: 'center', ...customMarginBottom(24)}}>
           <Button1 text={signupBtn[language]} />
         </View>
-        <View style={[styles.container, {marginBottom: 26}]}>
+        <View style={[styles.container, {marginBottom: 26 * scaleWidth}]}>
           <View style={{flex: 1}}>
             <Text style={[styles.colorText, styles.textBottom, IBMPlexSans400]}>
               {orSignup[language]}

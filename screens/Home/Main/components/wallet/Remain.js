@@ -32,15 +32,18 @@ import {
   customPaddingTop,
   customPaddingVertical,
   customWidth,
+  scale,
   scaleWidth,
 } from '../../../../../variable/sizes';
 import ButtonPadding from '../../../../../components/buttons/ButtonPadding';
 import ArrowBtnRight from '../../../../../variable/svgs/ArrowBtnRight';
 import LinearGradient from 'react-native-linear-gradient';
 import ListCard from './ListCard';
+import {useNavigation} from '@react-navigation/native';
 
 export default function Remain() {
   const language = useLanguage();
+  const {navigate} = useNavigation();
 
   return (
     <View style={[customMarginTop(29), customMarginBottom(130)]}>
@@ -53,9 +56,9 @@ export default function Remain() {
             <View style={customMarginTop(10)}>
               <ButtonPadding
                 text={earningNow[language]}
-                top={8}
-                bottom={13}
+                vertical={12}
                 horizontal={16}
+                onPress={() => navigate('EarningFree')}
               />
             </View>
           </View>
@@ -63,7 +66,10 @@ export default function Remain() {
       </View>
       <View style={[styles.shareLink, styles.flex]}>
         <Text style={styles.textShareLink}>{shareLink[language]}</Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            navigate('Setting', {screen: 'ReferralLink', initial: false})
+          }>
           <LinearGradient
             colors={['rgba(255, 255, 255, 0.2)', 'rgba(255, 255, 255, 0)']}
             start={{x: 0, y: 0}}
@@ -109,7 +115,7 @@ const styles = StyleSheet.create({
     borderRadius: 11,
     backgroundColor: 'rgba(8, 2, 28, 0.5)',
     ...customPaddingHorizontal(16),
-    ...customPaddingVertical(12),
+    ...customPaddingVertical(16),
     ...customMarginTop(24),
     ...customMarginBottom(22),
   },
@@ -118,6 +124,7 @@ const styles = StyleSheet.create({
     ...customFontsize(16),
     color: 'white',
     flex: 1,
+    lineHeight: scale(18),
   },
   textGetNow: {
     ...IBMPlexSans400,

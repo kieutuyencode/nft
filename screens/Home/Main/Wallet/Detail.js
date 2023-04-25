@@ -3,13 +3,18 @@ import BackgroundHeaderBack from '../../../../components/background/BackgroundHe
 import {useLanguage} from '../../../../store/language';
 import {
   account,
+  description,
+  historyCommission,
   totalFree,
   totalProfit,
+  userName,
 } from '../../../../language/home/main/wallet/detail';
 import ItemTotal from '../components/wallet/detail/ItemTotal';
 import {company1} from '../../../../variable/images';
-import {customMarginTop, scaleWidth} from '../../../../variable/sizes';
+import {customMarginTop, scale, scaleWidth} from '../../../../variable/sizes';
 import Table1 from '../components/wallet/detail/Table1';
+import Table2 from '../components/wallet/detail/Table2';
+import HistoryBorder from '../../../../components/history/HistoryBorder';
 
 export default function Detail() {
   const language = useLanguage();
@@ -31,6 +36,14 @@ export default function Detail() {
       <View style={customMarginTop(26)}>
         <Table1 />
       </View>
+      <View style={{marginVertical: scale(26)}}>
+        <Table2 />
+      </View>
+      <HistoryBorder
+        title={historyCommission[language]}
+        label1={userName[language]}
+        label2={description[language]}
+      />
     </BackgroundHeaderBack>
   );
 }

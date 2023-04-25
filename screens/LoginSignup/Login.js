@@ -20,6 +20,7 @@ import {
   customMarginBottom,
   customMarginHorizontal,
   customMarginTop,
+  scale,
 } from '../../variable/sizes';
 import Input1 from '../../components/inputs/Input1';
 import Button1 from '../../components/buttons/Button1';
@@ -48,7 +49,12 @@ export default function Login() {
         </View>
         <Input1 placeholder={passPlaceholder[language]} password />
       </View>
-      <View style={{alignItems: 'center', ...customMarginTop(21)}}>
+      <View
+        style={{
+          alignItems: 'center',
+          ...customMarginTop(21),
+          marginBottom: scale(26),
+        }}>
         <Button1 text={loginBtn[language]} onPress={() => navigate('Home')} />
         <TouchableOpacity
           style={customMarginTop(23)}

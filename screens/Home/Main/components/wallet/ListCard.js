@@ -1,34 +1,59 @@
-import {View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import Card from './Card';
-import {customMarginTop, scaleWidth} from '../../../../../variable/sizes';
-import Earn1 from '../../../../../variable/svgs/Earn1';
+import {scale, scaleWidth} from '../../../../../variable/sizes';
 import {useLanguage} from '../../../../../store/language';
 import {
   nftCard,
+  nftReal,
   virtual,
   virtualDesc,
 } from '../../../../../language/home/main/wallet/wallet';
 import Earn2 from '../../../../../variable/svgs/Earn2';
+import {useNavigation} from '@react-navigation/native';
 
 export default function ListCard() {
   const language = useLanguage();
+  const {navigate} = useNavigation();
 
   return (
-    <View
-      style={[
-        customMarginTop(56),
-        {flexDirection: 'row', columnGap: 22 * scaleWidth},
-      ]}>
-      <Card
-        icon={<Earn1 />}
-        title={virtual[language]}
-        description={virtualDesc[language]}
-      />
-      <Card
-        icon={<Earn2 />}
-        title={nftCard[language]}
-        description={virtualDesc[language]}
-      />
-    </View>
+    <ScrollView
+      horizontal
+      style={styles.container}
+      contentContainerStyle={styles.container}>
+      <View style={styles.width}>
+        <Card
+          icon={<Earn2 />}
+          title={virtual[language]}
+          description={virtualDesc[language]}
+        />
+      </View>
+      <View style={styles.width}>
+        <Card
+          icon={<Earn2 />}
+          title={nftCard[language]}
+          description={virtualDesc[language]}
+        />
+      </View>
+      <View style={styles.width}>
+        <Card
+          icon={<Earn2 />}
+          title={nftReal[language]}
+          description={virtualDesc[language]}
+          onPress={() => navigate('EstateNFT')}
+        />
+      </View>
+    </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: scale(36),
+    paddingBottom: scale(6),
+    paddingRight: scale(30),
+    columnGap: 22 * scaleWidth,
+  },
+  width: {
+    width: (scaleWidth * 375 - 20 * 2 * scaleWidth - 22 * scaleWidth) / 2,
+  },
+});

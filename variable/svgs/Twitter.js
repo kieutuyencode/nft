@@ -1,11 +1,11 @@
 import Svg, {Path} from 'react-native-svg';
 import {scaleWidth} from '../sizes';
 
-function Twitter() {
+function Twitter({scale}) {
   return (
     <Svg
-      width={33 * scaleWidth}
-      height={33 * scaleWidth}
+      width={scale ? scale * scaleWidth : 33 * scaleWidth}
+      height={scale ? scale * scaleWidth : 33 * scaleWidth}
       viewBox="0 0 33 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">

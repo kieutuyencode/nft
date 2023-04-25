@@ -4,13 +4,13 @@ import {gradient, primary} from '../../variable/colors';
 import {IBMPlexSans600} from '../../variable/fontFamily';
 import {
   customFontsize,
-  customPaddingBottom,
   customPaddingHorizontal,
-  customPaddingTop,
+  customPaddingVertical,
+  scale,
   scaleWidth,
 } from '../../variable/sizes';
 
-export default function Button1({text, onPress, top, bottom, horizontal}) {
+export default function ButtonPadding({text, onPress, vertical, horizontal}) {
   return (
     <View style={{alignItems: 'flex-start'}}>
       <TouchableOpacity onPress={onPress}>
@@ -21,8 +21,7 @@ export default function Button1({text, onPress, top, bottom, horizontal}) {
           style={{
             borderWidth: scaleWidth,
             borderColor: 'rgba(255, 255, 255, 0.16)',
-            ...customPaddingTop(top || 0),
-            ...customPaddingBottom(bottom || 0),
+            ...customPaddingVertical(vertical || 0),
             ...customPaddingHorizontal(horizontal || 0),
             borderRadius: 74,
           }}>
@@ -39,5 +38,6 @@ const styles = StyleSheet.create({
     ...customFontsize(16),
     color: 'white',
     textAlign: 'center',
+    lineHeight: scale(18),
   },
 });

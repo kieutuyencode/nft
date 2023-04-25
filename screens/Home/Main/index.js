@@ -8,7 +8,6 @@ import TabBarBottom from './components/TabBarBottom';
 import NftIcon from '../../../variable/svgs/Nft';
 import SwapIcon from '../../../variable/svgs/Swap';
 import SettingIcon from '../../../variable/svgs/Setting';
-import Setting from './Setting';
 import ProfileIcon from '../../../variable/svgs/Profile';
 import {useLanguage} from '../../../store/language';
 import {
@@ -17,6 +16,7 @@ import {
   swap,
   wallet,
 } from '../../../language/home/main/tabbar-bottom';
+import Setting from './Setting';
 
 const Tab = createBottomTabNavigator();
 
@@ -47,14 +47,14 @@ export default function Main() {
         component={Swap}
         options={{tabBarIcon: () => <SwapIcon />, tabBarLabel: swap[language]}}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Profile"
         component={Profile}
         options={{
           tabBarIcon: () => <ProfileIcon />,
           tabBarLabel: profile[language],
         }}
-      />
+      /> */}
       <Tab.Screen
         name="Setting"
         component={Setting}

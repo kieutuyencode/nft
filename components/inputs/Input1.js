@@ -13,6 +13,7 @@ import {
   customPaddingRight,
   customPaddingVertical,
   customWidth,
+  scale,
 } from '../../variable/sizes';
 import {IBMPlexSans400} from '../../variable/fontFamily';
 import {eye, eyeOff} from '../../variable/images';
@@ -65,6 +66,6 @@ const styles = StyleSheet.create({
     ...customFontsize(12),
     ...IBMPlexSans400,
     flex: 1,
-    ...customPaddingVertical(16),
+    ...customPaddingVertical(14),
   },
 });

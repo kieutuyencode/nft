@@ -69,7 +69,7 @@ export default function TabBarBottom({state, descriptors, navigation}) {
                 <LinearGradient
                   colors={[primary, gradient]}
                   start={{x: 0, y: 0}}
-                  end={{x: 1, y: 0}}
+                  end={{x: 0, y: 1}}
                   style={styles.active}>
                   <IconTab />
                   <Text style={styles.label}>{label}</Text>

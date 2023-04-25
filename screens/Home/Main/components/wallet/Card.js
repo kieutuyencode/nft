@@ -15,7 +15,7 @@ import {
 } from '../../../../../variable/fontFamily';
 import ArrowBtnRight from '../../../../../variable/svgs/ArrowBtnRight';
 
-export default function Card({icon, title, description}) {
+export default function Card({icon, title, description, onPress}) {
   return (
     <LinearGradient
       colors={['rgba(80, 45, 159, 0.4)', 'rgba(8, 2, 28, 0)']}
@@ -31,7 +31,7 @@ export default function Card({icon, title, description}) {
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.description}>{description}</Text>
         </View>
-        <TouchableOpacity style={customMarginLeft(6)}>
+        <TouchableOpacity style={customMarginLeft(6)} onPress={onPress}>
           <ArrowBtnRight />
         </TouchableOpacity>
       </View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
     top: -40 * scaleWidth,
-    right: -22 * scaleWidth,
+    right: -8 * scaleWidth,
   },
   title: {
     ...IBMPlexSans700,

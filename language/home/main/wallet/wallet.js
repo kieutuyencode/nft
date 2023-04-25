@@ -72,3 +72,8 @@ export const nftCard = {
   en: 'NFT Card',
   vn: 'Thẻ NFT',
 };
+
+export const nftReal = {
+  en: 'NFT Real Estate',
+  vn: 'Bất động sản NFT',
+};

@@ -6,10 +6,11 @@ import {
   customFontsize,
   customPaddingVertical,
   customWidth,
+  scale,
   scaleWidth,
 } from '../../variable/sizes';
 
-export default function Button1({text, onPress}) {
+export default function Button1({text, onPress, width, vertical}) {
   return (
     <TouchableOpacity onPress={onPress}>
       <LinearGradient
@@ -19,9 +20,9 @@ export default function Button1({text, onPress}) {
         style={{
           borderWidth: scaleWidth,
           borderColor: 'rgba(255, 255, 255, 0.16)',
-          ...customPaddingVertical(12),
+          ...customPaddingVertical(vertical || 12),
           borderRadius: 74,
-          ...customWidth(259),
+          ...customWidth(width || 259),
         }}>
         <Text style={styles.text}>{text}</Text>
       </LinearGradient>
@@ -35,5 +36,6 @@ const styles = StyleSheet.create({
     ...customFontsize(16),
     color: 'white',
     textAlign: 'center',
+    lineHeight: scale(19),
   },
 });

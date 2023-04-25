@@ -10,9 +10,11 @@ import {
 import {useLanguage} from '../../../../../store/language';
 import ArrowDown from '../../../../../variable/svgs/ArrowDown';
 import Transfer from '../../../../../variable/svgs/Transfer';
+import {useNavigation} from '@react-navigation/native';
 
 export default function ListButton() {
   const language = useLanguage();
+  const {navigate} = useNavigation();
 
   return (
     <View style={{marginTop: -40}}>
@@ -25,9 +27,21 @@ export default function ListButton() {
           },
           customMarginTop(10),
         ]}>
-        <ButtonIcon icon={<ArrowUp />} title={deposit[language]} />
-        <ButtonIcon icon={<ArrowDown />} title={withDraw[language]} />
-        <ButtonIcon icon={<Transfer />} title={transfer[language]} />
+        <ButtonIcon
+          icon={<ArrowUp />}
+          title={deposit[language]}
+          onPress={() => navigate('Deposit')}
+        />
+        <ButtonIcon
+          icon={<ArrowDown />}
+          title={withDraw[language]}
+          onPress={() => navigate('WithDraw')}
+        />
+        <ButtonIcon
+          icon={<Transfer />}
+          title={transfer[language]}
+          onPress={() => navigate('Transfer')}
+        />
       </View>
     </View>
   );
