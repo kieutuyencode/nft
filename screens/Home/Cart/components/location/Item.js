@@ -49,7 +49,7 @@ export default function Item({title, address, star}) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'rgba(8, 2, 28, 0.8)',
-    borderRadius: 16,
+    borderRadius: scale(16),
     overflow: 'hidden',
     paddingHorizontal: scale(5),
     paddingTop: scale(5),
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   img: {
     width: '100%',
     height: scale(89),
-    borderRadius: 10,
+    borderRadius: scale(10),
   },
   title: {
     ...IBMPlexSans700,

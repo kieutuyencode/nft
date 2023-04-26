@@ -47,9 +47,9 @@ export default function Contact() {
         <TouchableOpacity>
           <LinearGradient
             colors={['#E50876', '#4A1A5B']}
-            start={{x: 1, y: 1}}
+            start={{x: 1, y: 0}}
             end={{x: 0, y: 0}}
-            style={{borderRadius: 22}}>
+            style={{borderRadius: scale(22)}}>
             <Text style={styles.textBtn}>{submit[language]}</Text>
           </LinearGradient>
         </TouchableOpacity>

@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: scale(10),
     paddingHorizontal: scale(14),
-    borderRadius: 18,
+    borderRadius: 999,
   },
   text: {
     ...IBMPlexSans400,

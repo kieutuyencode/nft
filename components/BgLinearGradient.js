@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {scaleWidth} from '../variable/sizes';
+import {scale, scaleWidth} from '../variable/sizes';
 
 export default function BgLinearGradient({children}) {
   return (
@@ -16,7 +16,7 @@ export default function BgLinearGradient({children}) {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 18,
+    borderRadius: scale(18),
     borderWidth: 2 * scaleWidth,
     borderColor: 'rgba(106, 49, 129, 0.2)',
     overflow: 'hidden',

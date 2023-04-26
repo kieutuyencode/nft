@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: scale(2),
     borderColor: 'rgba(106, 49, 129, 0.2)',
-    borderRadius: 18,
+    borderRadius: scale(18),
     overflow: 'hidden',
   },
 });

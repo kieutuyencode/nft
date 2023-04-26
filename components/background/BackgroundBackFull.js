@@ -28,7 +28,7 @@ export default function BackgroundBackFull({children}) {
               customPaddingBottom(7),
               {
                 backgroundColor: 'rgba(255, 255, 255, 0.15)',
-                borderRadius: 20,
+                borderRadius: scale(20),
                 flexDirection: 'row',
                 alignItems: 'center',
               },

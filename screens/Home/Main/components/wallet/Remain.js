@@ -49,7 +49,7 @@ export default function Remain() {
   return (
     <>
       <View style={[customMarginTop(29), customMarginHorizontal(20)]}>
-        <View style={{borderRadius: 18, overflow: 'hidden'}}>
+        <View style={{borderRadius: scale(18), overflow: 'hidden'}}>
           <ImageBackground source={bgclaim}>
             <View style={styles.container}>
               <Text style={styles.text}>{claim[language]}</Text>
@@ -82,7 +82,7 @@ export default function Remain() {
             </LinearGradient>
           </TouchableOpacity>
         </View>
-        <View style={{borderRadius: 14, overflow: 'hidden'}}>
+        <View style={{borderRadius: scale(14), overflow: 'hidden'}}>
           <ImageBackground source={mintNFT}>
             <View style={styles.nft}>
               <Text style={styles.nftText}>{nftMarket[language]}</Text>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   shareLink: {
-    borderRadius: 11,
+    borderRadius: scale(11),
     backgroundColor: 'rgba(8, 2, 28, 0.5)',
     ...customPaddingHorizontal(16),
     ...customPaddingVertical(16),

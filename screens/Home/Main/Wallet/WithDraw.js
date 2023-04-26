@@ -10,7 +10,8 @@ import {
 } from '../../../../language/home/main/wallet/withdraw';
 import Input2 from '../../../../components/inputs/Input2';
 import DescriptionText from '../../../../components/DescriptionText';
-import Button1 from '../../../../components/buttons/Button1';
+import {IBMPlexSans700} from '../../../../variable/fontFamily';
+import Button from '../../../../components/buttons/Button';
 
 export default function WithDraw() {
   const language = useLanguage();
@@ -35,7 +36,14 @@ export default function WithDraw() {
           <Input2 placeholder="2FA" />
         </View>
         <View style={{alignItems: 'center'}}>
-          <Button1 text={withDraw[language]} width={176} />
+          <Button
+            text={withDraw[language]}
+            font={IBMPlexSans700}
+            size={20}
+            vertical={8}
+            horizontal={40}
+            lineHeight={23}
+          />
         </View>
       </View>
     </BackgroundBack>

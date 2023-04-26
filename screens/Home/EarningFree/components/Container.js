@@ -25,7 +25,7 @@ export default function Container({children, marginHorizontal}) {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 18,
+    borderRadius: scale(18),
     borderWidth: scale(2),
     borderColor: 'rgba(106, 49, 129, 0.2)',
     marginTop: scale(20),

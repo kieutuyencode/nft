@@ -52,6 +52,8 @@ export default function DetailMarket() {
               size={16}
               lineHeight={18}
               vertical={10}
+              angle
+              borderNone
             />
             <Description />
           </View>
@@ -85,7 +87,7 @@ export default function DetailMarket() {
 }
 
 const styles = StyleSheet.create({
-  img: {width: '100%', borderRadius: 18},
+  img: {width: '100%', borderRadius: scale(18), height: scale(321)},
   title: {...IBMPlexSans600, fontSize: scale(20), color: 'white'},
   containTitle: {
     flexDirection: 'row',

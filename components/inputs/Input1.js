@@ -55,7 +55,7 @@ export default function Input1({placeholder, password, keyboardType}) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    borderRadius: 10,
+    borderRadius: scale(10),
     flexDirection: 'row',
     alignItems: 'center',
     ...customPaddingRight(14),

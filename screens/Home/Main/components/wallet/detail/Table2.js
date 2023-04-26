@@ -43,7 +43,7 @@ export default function Table2() {
 const styles = StyleSheet.create({
   container: {
     borderColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: 18,
+    borderRadius: scale(18),
     borderWidth: scale(1),
     overflow: 'hidden',
   },

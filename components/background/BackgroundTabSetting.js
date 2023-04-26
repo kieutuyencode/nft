@@ -30,7 +30,10 @@ export default function BackgroundTabSetting({children}) {
               customPaddingHorizontal(10),
               customPaddingTop(3),
               customPaddingBottom(7),
-              {backgroundColor: 'rgba(255, 255, 255, 0.15)', borderRadius: 20},
+              {
+                backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                borderRadius: scale(20),
+              },
             ]}>
             <View style={customMarginTop(4)}>
               <NumberWallet />
@@ -84,5 +87,6 @@ const styles = StyleSheet.create({
   content: {
     borderWidth: scale(2),
     borderColor: 'rgba(106, 49, 129, 0.2)',
+    flex: 1,
   },
 });

@@ -8,6 +8,7 @@ import {
   customPaddingHorizontal,
   customPaddingTop,
   customWidth,
+  scale,
   scaleWidth,
 } from '../../../../../../variable/sizes';
 import Text400size16 from '../../../../../../components/texts/Text400size16';
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   border: {
-    borderRadius: 18,
+    borderRadius: scale(18),
     borderWidth: 2 * scaleWidth,
     borderColor: 'rgba(106, 49, 129, 0.2)',
   },

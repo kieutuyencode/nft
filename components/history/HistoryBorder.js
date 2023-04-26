@@ -29,7 +29,7 @@ export default function HistoryBorder({title, label1, label2}) {
 const styles = StyleSheet.create({
   container: {
     borderWidth: scale(1),
-    borderRadius: 18,
+    borderRadius: scale(18),
     borderColor: 'rgba(255, 255, 255, 0.1)',
     overflow: 'hidden',
   },

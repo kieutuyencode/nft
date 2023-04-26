@@ -42,18 +42,17 @@ export default function Item({
           </View>
         </View>
       </View>
-      <View
-        style={[
-          styles.right,
-          cart && {marginVertical: scale(2)},
-          !cart && {width: '50%'},
-        ]}>
+      <View style={[styles.right, cart && {marginVertical: scale(2)}]}>
         <View>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.address}>{address}</Text>
           <Text style={styles.price}>${price}</Text>
           {!cart && (
-            <View style={{marginTop: scale(20), marginRight: scale(16)}}>
+            <View
+              style={{
+                marginTop: scale(20),
+                marginRight: scale(16),
+              }}>
               <Button
                 text={buy[language]}
                 vertical={8}
@@ -71,7 +70,7 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: scale(1),
     borderColor: '#F4007480',
-    borderRadius: 18,
+    borderRadius: scale(18),
     overflow: 'hidden',
     flexDirection: 'row',
     flex: 1,
@@ -79,13 +78,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(20, 14, 37, 0.5);',
   },
   left: {
-    borderRadius: 17,
+    borderRadius: scale(17),
     overflow: 'hidden',
     position: 'relative',
   },
   right: {
     marginVertical: scale(12),
     marginLeft: scale(16),
+    flex: 1,
   },
   img: {
     width: '100%',

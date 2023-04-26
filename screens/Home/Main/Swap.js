@@ -5,8 +5,9 @@ import {useLanguage} from '../../../store/language';
 import {swap, tradeToken} from '../../../language/home/main/swap';
 import {scale} from '../../../variable/sizes';
 import Text400size16 from '../../../components/texts/Text400size16';
-import Button1 from '../../../components/buttons/Button1';
 import SelectCurrency from './components/swap/SelectCurrency';
+import Button from '../../../components/buttons/Button';
+import {IBMPlexSans600} from '../../../variable/fontFamily';
 
 export default function Swap() {
   const language = useLanguage();
@@ -20,7 +21,14 @@ export default function Swap() {
         </View>
         <SelectCurrency />
         <View style={styles.button}>
-          <Button1 text={swap[language]} width={176} />
+          <Button
+            text={swap[language]}
+            font={IBMPlexSans600}
+            size={16}
+            lineHeight={20}
+            vertical={12}
+            horizontal={76}
+          />
         </View>
       </View>
     </BackgroundHeader>

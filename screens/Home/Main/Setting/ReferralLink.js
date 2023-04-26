@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     lineHeight: scale(16),
   },
   card: {
-    borderRadius: 18,
+    borderRadius: scale(18),
     backgroundColor: '#4C2060',
     paddingHorizontal: scale(16),
     paddingVertical: scale(12),
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: scale(1),
-    borderRadius: 5,
+    borderRadius: scale(5),
     borderColor: '#EAEAEA',
     backgroundColor: 'white',
     paddingVertical: scale(8),
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     marginTop: scale(20),
   },
   btn: {
-    borderRadius: 5,
+    borderRadius: scale(5),
     marginTop: scale(16),
   },
   textBtn: {

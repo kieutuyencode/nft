@@ -42,7 +42,7 @@ export default function Card({icon, title, description, onPress}) {
 const styles = StyleSheet.create({
   container: {
     borderWidth: 2 * scaleWidth,
-    borderRadius: 18,
+    borderRadius: 18 * scaleWidth,
     borderColor: 'rgba(106, 49, 129, 0.2)',
     position: 'relative',
     ...customPaddingHorizontal(13),

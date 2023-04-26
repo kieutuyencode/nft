@@ -28,7 +28,10 @@ export default function Container({children, tab, full}) {
             customPaddingHorizontal(10),
             customPaddingTop(3),
             customPaddingBottom(7),
-            {backgroundColor: 'rgba(255, 255, 255, 0.15)', borderRadius: 20},
+            {
+              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+              borderRadius: scale(20),
+            },
           ]}>
           <View style={customMarginTop(4)}>
             <NumberWallet />

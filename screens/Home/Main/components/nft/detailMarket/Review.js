@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     paddingVertical: scale(6),
   },
   input2: {
-    borderRadius: 13,
+    borderRadius: scale(13),
     marginTop: scale(12),
     paddingHorizontal: scale(14),
     paddingVertical: scale(6),

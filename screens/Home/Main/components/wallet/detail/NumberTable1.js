@@ -18,7 +18,7 @@ export default function NumberTable1({number}) {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 18,
+    borderRadius: scale(18),
   },
   text: {
     ...IBMPlexSans700,

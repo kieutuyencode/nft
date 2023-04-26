@@ -8,6 +8,7 @@ import {
   customPaddingHorizontal,
   customPaddingTop,
   customPaddingVertical,
+  scale,
   scaleWidth,
 } from '../../../../../../variable/sizes';
 import {
@@ -46,7 +47,7 @@ export default function Item({
               end={{x: 1, y: 1}}
               locations={[0.3392, 0.9986]}
               style={{
-                borderRadius: 22.5,
+                borderRadius: scale(22.5),
                 ...customPaddingHorizontal(14),
                 ...customPaddingTop(1),
                 ...customPaddingBottom(3),
@@ -63,7 +64,7 @@ export default function Item({
               end={{x: 1, y: 1}}
               locations={[0.3392, 0.9986]}
               style={{
-                borderRadius: 22.5,
+                borderRadius: scale(22.5),
                 ...customPaddingHorizontal(14),
                 ...customPaddingTop(1),
                 ...customPaddingBottom(3),
@@ -79,7 +80,7 @@ export default function Item({
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 20,
+    borderRadius: scale(20),
     ...customPaddingTop(8),
     ...customMarginBottom(12),
     ...customPaddingBottom(12),

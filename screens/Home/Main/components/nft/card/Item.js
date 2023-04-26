@@ -87,6 +87,8 @@ export default function Item({type}) {
                   lineHeight={16}
                   vertical={6}
                   horizontal={16}
+                  angle
+                  borderNone
                 />
               </View>
             </View>
@@ -109,7 +111,7 @@ const styles = StyleSheet.create({
     width: scale(308),
     height: scale(194),
     backgroundColor: 'white',
-    borderRadius: 18,
+    borderRadius: scale(18),
     position: 'relative',
   },
   classic: {

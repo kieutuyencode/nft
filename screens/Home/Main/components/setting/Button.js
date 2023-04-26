@@ -17,7 +17,7 @@ export default function Button({text, onPress}) {
 const styles = StyleSheet.create({
   btn: {
     backgroundColor: '#E8127C',
-    borderRadius: 5,
+    borderRadius: scale(5),
     ...customPaddingVertical(10),
   },
   text: {
